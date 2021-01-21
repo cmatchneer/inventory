@@ -8,3 +8,6 @@ class Product (models.Model):
     quantity= models.IntegerField(default=0) 
     available = models.BooleanField(default=True)
     date = models.DateField(auto_now=False,auto_now_add=False, default="2021-11-1")
+
+    # def get_absolute_url(self):
+    #     return reverse("product:product-detail", kwargs={"id": self.id})

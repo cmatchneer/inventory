@@ -4,11 +4,10 @@ from .form import ProductForm
 # Create your views here.
 
 def product_form_view(request):
-    obj = Product.objects.get(id=2)
-    form = ProductForm(request.POST or None,instance=obj )
+    form = ProductForm(request.POST or None)
     if form.is_valid():
         form.save()
-        
+        form = ProductForm()
     context = {
         'form': form
     }
@@ -20,5 +19,25 @@ def product_list_view(request):
 
     }
     return render(request,"product/product_detail.html",context)
+def product_delete_view(request, id):
+    obj = get_object_or_404(Product, id=id)
+    if request.method == "POST":
+        obj.delete()
+        return redirect('../../')
+    context = {
+        "object": obj
+    }
+    return render(request, "product/product_delete.html", context)
 
  
+def product_update_view(request, id=id):
+    obj = get_object_or_404(Product, id=id)
+    form = ProductForm(request.POST or None, instance=obj)
+    if form.is_valid():
+        form.save()
+    context = {
+        'form': form
+    }
+    return render(request, "product/product_form.html", context)
+    
+

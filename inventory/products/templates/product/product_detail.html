@@ -1,6 +1,7 @@
 {%extends "base.html"%}
 
 {%block content%}
+<!-- for loop to render each product -->
 {%for product in product_list%}
     <ul>
         <li id = {{product.id}}>{{product.title}}</li>

@@ -1,6 +1,8 @@
 {%extends "base.html"%}
 
 {%block content%}
+<p>{{num_visits}}</p>
+<!-- for loop to render each product -->
 {%for product in product_list%}
     <ul>
         <li id = {{product.id}}>{{product.title}}</li>
@@ -8,16 +10,13 @@
         <li>{{product.available}}</li>
         <li>{{product.date}}</li>
         <li>{{product.quantity}}</li>
+        <button><a href='/product/{{product.id}}/update'> update </a></button>
+        <button><a href='/product/{{product.id}}/delete'> delete </a></button>
+
 
 
 
     </ul>
 {%endfor%}
-<!-- <h1>{{product.title}}</h1>
-<p>{{product.price}}</p>
-{%if product.available%}
-    <p>In Stock</p>
-{%else%}
-    <p>Out of Stock</p>
-{%endif%} -->
+
 {%endblock%}

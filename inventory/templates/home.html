@@ -1,10 +1,7 @@
 {%extends 'base.html'%}
+
     {% block content%}
-    <h1>testing template</h1>
-    <p>{{word}}</p>
-    {{count}}
-    {% for number in count%}
-    <li>{{number}}</li>
-    {%endfor%}
+    {% load static %}
+    <h1>Home page</h1>
     {%endblock%}
 

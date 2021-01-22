@@ -11,11 +11,11 @@
         <ul>
             <h5>{{product.title}}</h5>
 
-            <li>Price:{{product.price}}</li>
+            <li>Price: {{product.price}}</li>
             {% if product.available %}
             <li>In stock</li>
-            <li> Amount in Backstock:{{product.quantity}}</li>
-            <li>Sell by Date:{{product.date}}</li>
+            <li> Amount in Backstock: {{product.quantity}}</li>
+            <li>Sell by Date: {{product.date}}</li>
 
             {%else%}
             <li>Out of Stock</li>

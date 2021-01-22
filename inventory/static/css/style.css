@@ -1,24 +1,36 @@
-/* h1{
-    color: red;
-    text-align: center;
-    background-color: black;
-    margin-left:150px;
-
-
-}
 body{
     background-color: lightblue;
 
-}
+    }
+ a { 
+    color: inherit; 
+    text-decoration: none;
+    } 
+ul{
+    list-style-type: none;
+
+    }
 .container{
-    display: inline-block;
-    width:30%;
-}
+    width: 100%;
+    }
+/* product styles */
 .products{
     display: inline-block;
+    vertical-align: top;
+
+    text-align: center; 
     width: 30%;
-    border:1px, solid,black;
+    border:3px, black, solid;
+    margin-right:3px; 
+
+    }
+/*delete styles  */
+#delete{
+    margin-left: 250px;
 }
-h5{
-    color:red;
-} */
+#buttons{
+    margin-left: 300px;
+}
+#delete_button{
+    margin-right:15px;
+}

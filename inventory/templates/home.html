@@ -2,6 +2,15 @@
 
     {% block content%}
     {% load static %}
+    <div id="home">
     <h1>Home page</h1>
+    {% if user.is_authenticated %}
+
+    {% else %}
+
+
+    {% endif %} 
+    </div>
+
     {%endblock%}
 

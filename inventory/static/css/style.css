@@ -70,12 +70,17 @@ ul{
 }
 #login_div{
     margin: 0 auto;
-    width:70%;
+    width:55%;
+    position: relative;
+
 }
 .fill_in{
     display: inline-block;
+    vertical-align: top;
+
 }
 #login_button{
     text-align: center;
-    /* display: inline-block; */
+    position: absolute;
+    right:220px;
 }

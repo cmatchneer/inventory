@@ -3,10 +3,8 @@ from .views import (
     product_form_view, 
     product_delete_view,
     product_list_view,
-    product_update_view,
-    
+    product_update_view,  
 )
-
 app_name = 'product'
 urlpatterns = [
     path('', product_list_view, name='product-list'),

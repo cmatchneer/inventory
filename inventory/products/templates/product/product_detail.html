@@ -1,30 +1,24 @@
 {%extends "base.html"%}
 
 {%block content%}
-<div class="container">
-
-<!-- for loop to render each product -->
-{%for product in product_list%}
-<!-- <h1>test</h1> -->
-
-    <div class="products">
-        <ul>
-            <h5>{{product.title}}</h5>
-
-            <li>Price: {{product.price}}</li>
-            {% if product.available %}
-            <li>In stock</li>
-            <li> Amount in Backstock: {{product.quantity}}</li>
-            <li>Sell by Date: {{product.date}}</li>
-
-            {%else%}
-            <li>Out of Stock</li>
-            {% endif %} 
-            <a type="button" class="btn btn-secondary"href='/product/{{product.id}}/update'> update </a>
-            <a type="button" class="btn btn-danger" href='/product/{{product.id}}/delete'> delete </a>
-        </ul>
+    <div class="container">
+    <!-- for loop to render each product -->
+        {%for product in product_list%}
+        <div class="products">
+                <ul>
+                    <h5>{{product.title}}</h5>
+                    <li>Price: {{product.price}}</li>
+                    {% if product.available %}
+                        <li>In stock</li>
+                        <li> Amount in Backstock: {{product.quantity}}</li>
+                        <li>Sell by Date: {{product.date}}</li>
+                    {%else%}
+                        <li>Out of Stock</li>
+                    {% endif %} 
+                    <a type="button" class="btn btn-secondary"href='/product/{{product.id}}/update'> update </a>
+                    <a type="button" class="btn btn-danger" href='/product/{{product.id}}/delete'> delete </a>
+                </ul>
+            </div>
+        {%endfor%}
     </div>
-{%endfor%}
-</div>
-
 {%endblock%}

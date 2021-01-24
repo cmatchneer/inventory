@@ -1,18 +1,12 @@
 from django.shortcuts import redirect,render, get_object_or_404
 from django.contrib.auth.decorators import login_required
-
-
 from .models import Product
 from .form import ProductForm
-
-
 #confim user logged.
 @login_required()
 #add new product form
 def product_form_view(request):
-    
     form = ProductForm(request.POST or None)
-
     if form.is_valid():
         form.save()
         form = ProductForm()
@@ -27,7 +21,6 @@ def product_list_view(request):
     queryset=Product.objects.all()
     context={
       "product_list":queryset,
-
     }
     return render(request,"product/product_detail.html",context)
 @login_required()

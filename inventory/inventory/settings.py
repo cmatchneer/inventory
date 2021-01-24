@@ -125,4 +125,4 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
 ]
-print(STATICFILES_DIRS)
+LOGIN_REDIRECT_URL = '/'

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<div class= "container">
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
   {% endif %}
@@ -13,22 +13,23 @@
       <p>Please login to see this page.</p>
     {% endif %}
   {% endif %}
-
-  <form method="post" action="{% url 'login' %}">
+</div>
+<div id=login_div>
+  <form id="login_form" method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <table>
-      <tr>
+      <tr class="fill_in">
         <td>{{ form.username.label_tag }}</td>
         <td>{{ form.username }}</td>
       </tr>
-      <tr>
+      <tr class="fill_in">
         <td>{{ form.password.label_tag }}</td>
         <td>{{ form.password }}</td>
       </tr>
+      <input id= "login_button"class=" btn-primary"type="submit" value="login" />
+
     </table>
-    <input type="submit" value="login" />
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
-
-
+</div>
 {% endblock %}

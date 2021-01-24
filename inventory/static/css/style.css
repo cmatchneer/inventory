@@ -1,7 +1,6 @@
 /* general styles */
 body{
     background-color: lightblue;
-
     }
  a { 
     color: inherit; 
@@ -9,10 +8,10 @@ body{
     } 
 ul{
     list-style-type: none;
-
     }
 .container{
     width: 100%;
+    text-align: center;
     }
 .btn{
     box-shadow: 0 2px #999;
@@ -25,7 +24,6 @@ ul{
 .products{
     display: inline-block;
     vertical-align: top;
-
     text-align: center; 
     width: 20%;
     border:3px solid black;
@@ -58,4 +56,26 @@ ul{
 .nav-link:active{
     color:cadetblue !important;
     border:1px solid cadetblue;
+}
+/* logout styles */
+.logout{
+    width:30%;
+    margin: 0 auto;   
+    text-align: center;
+}
+/* loginstyle */
+#login_form{
+    display: inline-block;
+    width:70%;
+}
+#login_div{
+    margin: 0 auto;
+    width:70%;
+}
+.fill_in{
+    display: inline-block;
+}
+#login_button{
+    text-align: center;
+    /* display: inline-block; */
 }

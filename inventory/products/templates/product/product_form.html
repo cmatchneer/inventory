@@ -1,19 +1,16 @@
 {%extends "base.html"%}
 
 {%block content%}
-<h3>Enter Product Into Inventory Database</h3>
-<form method = POST>{%csrf_token%}
-    <div class ="row g-3 align-items-center">
-        <div class="col-auto">
-            {% for field in form %}
-                <label class="form-label" for="{{ field.auto_id }}">{{ field.label }}</label>
-                
-                {{ field }}
-            {% endfor %}
-
-
+    <h3>Enter Product Into Inventory Database</h3>
+    <form method = POST>{%csrf_token%}
+        <div class ="row g-3 align-items-center">
+            <div class="col-auto">
+                {% for field in form %}
+                    <label class="form-label" for="{{ field.auto_id }}">{{ field.label }}</label>
+                 {{ field }}
+                {% endfor %}
+            </div>
         </div>
-    </div>
-    <button type='submit' value='save' class="btn btn-primary">Submit</button>
-</form>
+        <button type='submit' value='save' class="btn btn-primary">Submit</button>
+    </form>
 {%endblock%}

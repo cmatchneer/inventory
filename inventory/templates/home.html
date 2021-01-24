@@ -1,16 +1,14 @@
 {%extends 'base.html'%}
 
-    {% block content%}
-    {% load static %}
+{% block content%}
     <div id="home">
-    <h1>Inventory Manager</h1>
-    {% if user.is_authenticated %}
-        <p id="name">Welcome {{user.first_name}} {{user.last_name}} Lets Start</p>
-    {% else %}
-        <p id="login">Hello Please Login to Begin Working</p>
+        <h1>Inventory Manager</h1>
+        {% if user.is_authenticated %}
+            <p id="name">Welcome {{user.first_name}} {{user.last_name}} Lets Start</p>
+        {% else %}
+            <p id="login">Hello Please Login to Begin Working</p>
 
-    {% endif %} 
+        {% endif %} 
     </div>
-
-    {%endblock%}
+{%endblock%}
 

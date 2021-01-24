@@ -1,3 +1,4 @@
+<!-- bootstrap nav bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -12,14 +13,13 @@
             <a class="nav-link active" href="/product/form">Add Product</a>
           </li>
           {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="nav-link active " href="{% url 'logout' %}" tabindex="-1" aria-disabled="true">logout</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link active " href="{% url 'logout' %}" tabindex="-1" aria-disabled="true">logout</a>
+            </li>
           {% else %}
-
-          <li class="nav-item">
-            <a class="nav-link active " href="{% url 'login' %}" tabindex="-1" aria-disabled="true">Login</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link active " href="{% url 'login' %}" tabindex="-1" aria-disabled="true">Login</a>
+            </li>
           {% endif %} 
 
           

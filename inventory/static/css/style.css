@@ -49,3 +49,13 @@ ul{
     width:60%;
     text-align: center;
 }
+/* nav styles */
+.nav-link:hover{
+    /* color:blue !important; */
+    border:1px solid white;
+
+}
+.nav-link:active{
+    color:cadetblue !important;
+    border:1px solid cadetblue;
+}

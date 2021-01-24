@@ -27,5 +27,4 @@ class ProductForm(forms.ModelForm):
         ]
 
 
-#  price = forms.DecimalField(label="Price",  widget=forms.NumberInput(attrs={"placeholder":"0.00",
-#                                                     "class":"form-control"}))
+                                                   

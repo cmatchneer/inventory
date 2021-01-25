@@ -39,7 +39,9 @@ def product_delete_view(request, id):
 #update product 
 def product_update_view(request, id=id):
     obj = get_object_or_404(Product, id=id)
+    obj.date=""
     form = ProductForm(request.POST or None, instance=obj)
+    print(obj.date)
     if form.is_valid():
         form.save()
     context = {
